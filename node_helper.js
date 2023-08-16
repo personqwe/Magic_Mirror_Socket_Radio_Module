@@ -22,13 +22,6 @@ module.exports = NodeHelper.create({
 
         io.on('connection', (socket) => {
             console.log('Client connected');
-
-            socket.on('message', (obj) => {
-                console.log('Server message received data:', obj);
-
-                    this.sendSocketNotification("UPDATE_TEXT", obj);
-                
-            });
             
             socket.on('radio', (obj) => {
                 console.log('Server radio received data:', obj);
